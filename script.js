@@ -98,14 +98,17 @@ function display_list(num4)
 	{
 		list_table[num4]=true;
 	}
+	ol_list[num4].style=(list_table[num4])? ("display:block"):("display:none");
+	li_list[num4].style=(list_table[num4])? ("background-color:#628ed0;"):null;
 	for(var i=0;i<ol_list.length;i++)
 	{
 		if(i==num4)
 			continue;
 		ol_list[i].style.display="none";
 		list_table[i]=false;
+		li_list[i].style=null;
+		// ("background-color:#89aadc;")
 	}
-	ol_list[num4].style.display=(list_table[num4])? "block":"none";
 }
 var clickhandler_list=false;
 function func()
