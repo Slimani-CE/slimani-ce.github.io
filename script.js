@@ -72,40 +72,11 @@ function addValue(num2)
 		user_info[num2].setAttribute("value",table[num2]);
 }
 
-//adding new item to list!                       >>>>
-var new_item=document.getElementById("new-item");
-new_item.addEventListener("click",removeValue1);
-function  removeValue1() 
-{
-	new_item.setAttribute("value","");
-}
-var eventHandler_newitem=false;
-body.addEventListener("click",addValue1);
-new_item.addEventListener("click",eventHandler_newitem_change);
-function addValue1()
-{
-	if(eventHandler_newitem)
-	{
-		eventHandler_newitem=false;
-		return;
-	}
-	new_item.setAttribute("value","add new item");
-}
-function eventHandler_newitem_change()
-{
-	if (!eventHandler_newitem)
-		eventHandler_newitem=true;
-}
-var button_addvalue=document.getElementById("new-item-button");
-var list=document.getElementsByClassName("Liste-2")[0];
-button_addvalue.addEventListener("click",additem);
-function additem()
-{
-	list.innerHTML+='<li class="li-list">'+new_item.value+'</li>';
-}
+
 
 //all about list styling !!
-var ol_list=document.getElementsByClassName("ol-list");
+list_style();
+function list_style(){var ol_list=document.getElementsByClassName("ol-list");
 var li_list=document.getElementsByClassName("li-list");
 
 for(var i=0;i<ol_list.length;i++)
@@ -148,5 +119,42 @@ var clickhandler_list=false;
 function func()
 {
 	clickhandler_list=true;//true if we clicked li element!
-}
+}}
 
+//get input more respositivity!!               >>>>
+var clickhandler_additem=false;
+var new_item=document.getElementById("new-item");
+new_item.addEventListener("click",removeValue1);
+function  removeValue1() 
+{
+	new_item.setAttribute("value","");
+}
+var eventHandler_newitem=false;
+body.addEventListener("click",addValue1);
+new_item.addEventListener("click",eventHandler_newitem_change);
+function addValue1()
+{
+	if(eventHandler_newitem)
+	{
+		eventHandler_newitem=false;
+		return;
+	}
+	new_item.setAttribute("value","add new item");
+}
+function eventHandler_newitem_change()
+{
+	if (!eventHandler_newitem)
+		eventHandler_newitem=true;
+}
+//                                             <<<<
+
+//adding new item to list!                     >>>>
+var button_addvalue=document.getElementById("new-item-button");
+var list=document.getElementsByClassName("todo-liste")[0];
+button_addvalue.addEventListener("click",additem);
+function additem()
+{
+	list.innerHTML+='<li class="li-list">'+new_item.value+'</li>';
+	list_style();
+}
+//                                             <<<<
