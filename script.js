@@ -153,7 +153,7 @@ function addValue1()
 		eventHandler_newitem=false;
 		return;
 	}
-	new_item.setAttribute("placeholder","add new item");
+	new_item.setAttribute("value","add new item");
 }
 function eventHandler_newitem_change()
 {
@@ -203,14 +203,14 @@ function deletelist()
 
 //item delete + name change + subitem add      >>>>
 manage_item();
-var handler=0;
+var handler=[0];
 function manage_item(){
 var  item_element=document.getElementsByClassName("li-list");
 var item_delete_button_table=document.getElementsByClassName("item-delete-button");
 var item_add_button_table=document.getElementsByClassName("item-add-button");
 var item_change_button_table=document.getElementsByClassName("item-change-button");
 var Length=item_delete_button_table.length;
-for(var i=0;i<item_delete_button_table.length;i++)
+for(var i=0;i<item_element.length;i++)
 {
 	item_delete_button_table[i].addEventListener("click",delete_item.bind(null,i));
 	item_add_button_table[i].addEventListener("click",add_item.bind(null,i));
@@ -218,19 +218,19 @@ for(var i=0;i<item_delete_button_table.length;i++)
 }
 
 // delete item from list                    >>>>
-function delete_item(num)
+function delete_item(num5)
 {
 	Length--;
-	item_element[num].style.display="none";
-	item_display_table[num]=true;
-	delete_button(num);
+	item_element[num5].style.display="none";
+	item_display_table[num5]=true;
+	delete_button(num5);
 	return;
 }
-function delete_button(num)
+function delete_button(num6)
 {
-	item_delete_button_table[num].style.display="none";
-	item_add_button_table[num].style.display="none";
-	item_change_button_table[num].style.display="none";
+	item_delete_button_table[num6].style.display="none";
+	item_add_button_table[num6].style.display="none";
+	item_change_button_table[num6].style.display="none";
 	
 	if(!Length)
 		deletelist();
@@ -239,24 +239,25 @@ function delete_button(num)
 //                                          <<<<
 
 // add subitem to the list                  >>>>
-function add_item(num)
+function add_item(num7)
 {	
-	handler=0;
+	handler[num7]=0;
 	document.getElementById("close-button").addEventListener("mouseover",close_button_effect);
 	document.getElementById("close-button").addEventListener("click",close_popup);
 	document.getElementById("close-button").addEventListener("mouseout",close_button_no_effect);
 	document.getElementsByClassName("popup-Container")[0].style.display="inline-block";
-	document.getElementsByClassName("popup-button")[0].addEventListener("click",addsubitem.bind(null,num));
+	document.getElementsByClassName("popup-button")[0].addEventListener("click",addsubitem.bind(null,num7));
 }
-function addsubitem(num)
+function addsubitem(num8)
 {
-	handler++;
-	if(handler>=2)
+	handler[num8]++;
+	if(handler[num8]>=2)
 		return;
 	var subitem_text;
 	subitem_text=document.getElementById("item");
-	item_element[num].getElementsByTagName("ol")[0].innerHTML+='<li>'+subitem_text.value+'</li>';
+	item_element[num8].getElementsByTagName("ol")[0].innerHTML+='<li>'+subitem_text.value+'</li>';
 	document.getElementsByClassName("popup-Container")[0].style.display="none";
+	list_style();
 }
 
 function close_button_effect()
