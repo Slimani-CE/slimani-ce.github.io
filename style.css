@@ -5,6 +5,8 @@ body
 	background-repeat: no-repeat;
 	background-size: 100% 100% ;
 	background-attachment: fixed;
+	width: 100% ;
+	height: 100% ;
 }
 * {
   box-sizing: border-box;
@@ -41,6 +43,7 @@ body
 	margin-left: 2% ;
 	margin-right: 2% ;
 	text-align: center;
+/*	display: none;*/
 	background-position: center;
 }
 
@@ -162,23 +165,19 @@ th,td {
 	width: 100% ;
 }
 
-.todo-liste li:nth-child(n)
+.todo-liste li
 {
 	border: 1px solid #e2d546 ;
 	margin-top: 5px ;
 	cursor: pointer;
 	text-align: left;
-	width: 100% ;
+	width: 70% ;
 	font-family: arial, sans-serif;
 	padding: 8px ;
-}
-
-.todo-liste li:nth-child(n)
-{
 	background-color: #89aadc ;
 }
 
-.todo-liste li:nth-child(n):hover
+.todo-liste li:hover
 {
 	margin-top: 5px ;
 	margin-left: 5px ;
@@ -186,6 +185,31 @@ th,td {
 	background-color: #628ed0;
 	border-color:#e2d546 ;
 }
+
+.todo-liste div
+{
+	border: 1px solid #e2d546 ;
+	margin-top: 5px ;
+	cursor: pointer;
+	margin-left: 1px;
+	margin-right: 1px;
+	text-align: center;
+	width: 8% ;
+	float: right;
+	font-family: arial, sans-serif;
+	/*font-size: 1vw;*/
+	padding: 8px ;
+	background-color: #89aadc ;
+}
+
+
+.todo-liste div:hover
+{
+	cursor: pointer;
+	background-color: #628ed0;
+}
+
+
 
 .button1
 {
@@ -300,7 +324,7 @@ th,td {
  	border-radius: 25px ;
 }
 
-.button-additem
+.button-style-1
 {
 	background-color: rgba(137, 170, 220,0.7);
   	color: white;
@@ -314,7 +338,7 @@ th,td {
  	margin: 4px;
  	border-radius: 25px ;
 }
-.button-additem:hover
+.button-style-1:hover
 {
 	background-color: #e0891f;
  	cursor: pointer;
@@ -378,7 +402,7 @@ input[type=checkbox]{
 	.new-item-class input{
 		font-size: 12px;
 	}
-	.button-additem{
+	.button-style-1{
 		font-size: 12px;
 	}
 	.new-item-class label{
@@ -476,4 +500,73 @@ input[type=checkbox]{
 }
 .ol-list{
 	display: none;
+}
+
+/*popup-Container*/
+/*.Container{
+	display:none;
+}*/
+.popup-Container{
+	width: 100% ;
+	height: 100% ;
+	right: 0 ;
+	left: 0 ;
+	background-color: rgba(79, 126, 201,0.7);
+	position: fixed;
+	top: 0;
+	display: none;
+
+}
+.popup-modal {
+	width: 500px;
+	height: 300px ;
+	max-width: 80%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: rgba(8, 11, 22,0.8);
+}
+.popup-input{
+	width: 40%;
+	padding: 5px;
+ 	margin: 4px;
+ 	border-radius: 25px ;
+ 	font-size: 1vw;
+	background-color: rgba(137, 170, 220,0.7);
+  	color: white;
+ 	text-align: center;
+ 	text-decoration: none;
+ 	display: inline-block;
+ 	border: 2px solid #e2d546 ;
+ 	position: fixed;
+ 	top: 45%;
+	left: 50%;
+
+	transform: translate(-50%,-50%);
+}
+.popup-input::placeholder{
+  	color: rgba(215, 165, 66,1) ;
+}
+.popup-button{
+	position: fixed;
+ 	top: 70%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.popup-modal h2{
+	color: #f6b83c ;
+	margin-top: 10%;
+	margin-right: 5%;
+	margin-left: 5%;
+}
+.popup-modal p{
+	color: #f6b83c ;
+	margin-top: 0 ;
+	margin-right: 5px ;
+	cursor: pointer;
+	/*padding-right: 5px ;*/
+	float: right;
+	font-size: 2.5vw;
+	font-family: bold , arial;
 }

@@ -75,8 +75,10 @@ function addValue(num2)
 
 
 //all about list styling !!
+var item_display_table=[false];
 list_style();
-function list_style(){var ol_list=document.getElementsByClassName("ol-list");
+function list_style(){
+var ol_list=document.getElementsByClassName("ol-list");
 var li_list=document.getElementsByClassName("li-list");
 
 for(var i=0;i<ol_list.length;i++)
@@ -105,13 +107,15 @@ function display_list(num4)
 	}
 	ol_list[num4].style=(list_table[num4])? ("display:block"):("display:none");
 	li_list[num4].style=(list_table[num4])? ("background-color:#628ed0;"):null;
-	for(var i=0;i<ol_list.length;i++)
+	for(var i=0;i<li_list.length;i++)
 	{
 		if(i==num4)
 			continue;
 		ol_list[i].style.display="none";
 		list_table[i]=false;
 		li_list[i].style=null;
+		if(item_display_table[i])
+			li_list[i].style.display="none";
 		// ("background-color:#89aadc;")
 	}
 }
@@ -121,13 +125,23 @@ function func()
 	clickhandler_list=true;//true if we clicked li element!
 }}
 
+
+var new_item_added_eventHandler=false; 
+var new_item_added_text_eventHandler=false;
 //get input more respositivity!!               >>>>
 var clickhandler_additem=false;
 var new_item=document.getElementById("new-item");
 new_item.addEventListener("click",removeValue1);
 function  removeValue1() 
 {
+	if(new_item_added_text_eventHandler)
+	{
+		new_item.value=null;
+		new_item.setAttribute("value","gooood!");
+		new_item_added_text_eventHandler=false;
+	}
 	new_item.setAttribute("value","");
+	new_item_added_eventHandler=true;
 }
 var eventHandler_newitem=false;
 body.addEventListener("click",addValue1);
@@ -139,7 +153,7 @@ function addValue1()
 		eventHandler_newitem=false;
 		return;
 	}
-	new_item.setAttribute("value","add new item");
+	new_item.setAttribute("placeholder","add new item");
 }
 function eventHandler_newitem_change()
 {
@@ -147,14 +161,118 @@ function eventHandler_newitem_change()
 		eventHandler_newitem=true;
 }
 //                                             <<<<
-
+												  
 //adding new item to list!                     >>>>
+var deleted_list_eventHandler=false;
 var button_addvalue=document.getElementById("new-item-button");
 var list=document.getElementsByClassName("todo-liste")[0];
 button_addvalue.addEventListener("click",additem);
 function additem()
 {
-	list.innerHTML+='<li class="li-list">'+new_item.value+'</li>';
+	if(!new_item_added_eventHandler || new_item.value=="")
+	{	
+		alert("please add a new item!");
+		return;
+	}
+	if(deleted_list_eventHandler)
+	{
+		deleted_list_eventHandler=false;
+		list.innerHTML=null;
+	}
+	list.innerHTML+='<div class="item-delete-button">D</div><div class="item-add-button">+</div><div class="item-change-button">C</div><li class="li-list">'+new_item.value+'<ol type="1" class="ol-list"></ol></li>';
+	new_item_added_text_eventHandler=true;
 	list_style();
+	manage_item();
+
+	// use this when we want the user to add new item !!
+	// new_item_added_eventHandler=false;
 }
+//                                             <<<<
+
+//Delete the entire list                       >>>>
+
+var delete_todolist_button=document.getElementById("delete-button");
+delete_todolist_button.addEventListener("click",deletelist);
+function deletelist()
+{
+	list.innerHTML="<h2 class='form-holder'>Your list is empty!</h2>"
+	deleted_list_eventHandler=true;
+}
+
+//                                             <<<<
+
+//item delete + name change + subitem add      >>>>
+manage_item();
+var handler=0;
+function manage_item(){
+var  item_element=document.getElementsByClassName("li-list");
+var item_delete_button_table=document.getElementsByClassName("item-delete-button");
+var item_add_button_table=document.getElementsByClassName("item-add-button");
+var item_change_button_table=document.getElementsByClassName("item-change-button");
+var Length=item_delete_button_table.length;
+for(var i=0;i<item_delete_button_table.length;i++)
+{
+	item_delete_button_table[i].addEventListener("click",delete_item.bind(null,i));
+	item_add_button_table[i].addEventListener("click",add_item.bind(null,i));
+	// item_delete_button_table[i].addEventListener("click",delete_item.bind(null,i));
+}
+
+// delete item from list                    >>>>
+function delete_item(num)
+{
+	Length--;
+	item_element[num].style.display="none";
+	item_display_table[num]=true;
+	delete_button(num);
+	return;
+}
+function delete_button(num)
+{
+	item_delete_button_table[num].style.display="none";
+	item_add_button_table[num].style.display="none";
+	item_change_button_table[num].style.display="none";
+	
+	if(!Length)
+		deletelist();
+	return;
+}
+//                                          <<<<
+
+// add subitem to the list                  >>>>
+function add_item(num)
+{	
+	handler=0;
+	document.getElementById("close-button").addEventListener("mouseover",close_button_effect);
+	document.getElementById("close-button").addEventListener("click",close_popup);
+	document.getElementById("close-button").addEventListener("mouseout",close_button_no_effect);
+	document.getElementsByClassName("popup-Container")[0].style.display="inline-block";
+	document.getElementsByClassName("popup-button")[0].addEventListener("click",addsubitem.bind(null,num));
+}
+function addsubitem(num)
+{
+	handler++;
+	if(handler>=2)
+		return;
+	var subitem_text;
+	subitem_text=document.getElementById("item");
+	item_element[num].getElementsByTagName("ol")[0].innerHTML+='<li>'+subitem_text.value+'</li>';
+	document.getElementsByClassName("popup-Container")[0].style.display="none";
+}
+
+function close_button_effect()
+{
+	this.style.transform="rotate(45deg)";
+}
+
+function close_button_no_effect()
+{
+	this.style.transform="rotate(0deg)";
+}
+function close_popup()
+{
+	document.getElementsByClassName("popup-Container")[0].style.display="none";
+}
+//                                          <<<<
+}
+
 //                                             <<<<
