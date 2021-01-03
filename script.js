@@ -210,7 +210,7 @@ var item_delete_button_table=document.getElementsByClassName("item-delete-button
 var item_add_button_table=document.getElementsByClassName("item-add-button");
 var item_change_button_table=document.getElementsByClassName("item-change-button");
 var Length=item_delete_button_table.length;
-for(var i=0;i<item_element.length;i++)
+for(var i=0;i<item_delete_button_table.length;i++)
 {
 	item_delete_button_table[i].addEventListener("click",delete_item.bind(null,i));
 	item_add_button_table[i].addEventListener("click",add_item.bind(null,i));
@@ -243,6 +243,7 @@ function add_item(num7)
 {	
 	handler[num7]=0;
 	document.getElementById("popup-title").innerHTML+=item_element[num7].innerHTML;
+	document.getElementById("popup-title").getElementsByTagName("ol")[0].style.display="none";
 	document.getElementById("close-button").addEventListener("mouseover",close_button_effect);
 	document.getElementById("close-button").addEventListener("click",close_popup.bind(null,num7));
 	document.getElementById("close-button").addEventListener("mouseout",close_button_no_effect);
