@@ -243,7 +243,7 @@ function add_item(num7)
 {	
 	handler[num7]=0;
 	document.getElementById("close-button").addEventListener("mouseover",close_button_effect);
-	document.getElementById("close-button").addEventListener("click",close_popup);
+	document.getElementById("close-button").addEventListener("click",close_popup.bind(null,num7));
 	document.getElementById("close-button").addEventListener("mouseout",close_button_no_effect);
 	document.getElementsByClassName("popup-Container")[0].style.display="inline-block";
 	document.getElementsByClassName("popup-button")[0].addEventListener("click",addsubitem.bind(null,num7));
@@ -269,8 +269,9 @@ function close_button_no_effect()
 {
 	this.style.transform="rotate(0deg)";
 }
-function close_popup()
+function close_popup(num9)
 {
+	handler[num9]++;
 	document.getElementsByClassName("popup-Container")[0].style.display="none";
 }
 //                                          <<<<
