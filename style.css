@@ -1,6 +1,5 @@
 body
 {
-	/*background-color: #202b32 ;*/
 	background-image: url("images/itachi-3.jpg");
 	background-repeat: no-repeat;
 	background-size: 100% 100% ;
@@ -38,7 +37,7 @@ body
 .Container
 {
 	border: 2px solid #e2d546 ;
-	background-color: rgba(30, 34, 62, 0.8) ;
+	background-color: rgba(179, 204, 255, 0.8) ;
 	padding: 10px ;
 	margin-left: 2% ;
 	margin-right: 2% ;
