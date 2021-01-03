@@ -242,6 +242,7 @@ function delete_button(num6)
 function add_item(num7)
 {	
 	handler[num7]=0;
+	document.getElementById("popup-title").innerHTML+=item_element[num7].innerHTML;
 	document.getElementById("close-button").addEventListener("mouseover",close_button_effect);
 	document.getElementById("close-button").addEventListener("click",close_popup.bind(null,num7));
 	document.getElementById("close-button").addEventListener("mouseout",close_button_no_effect);
@@ -257,6 +258,7 @@ function addsubitem(num8)
 	subitem_text=document.getElementById("item");
 	item_element[num8].getElementsByTagName("ol")[0].innerHTML+='<li>'+subitem_text.value+'</li>';
 	document.getElementsByClassName("popup-Container")[0].style.display="none";
+	document.getElementById("popup-title").innerHTML="";
 	list_style();
 }
 
@@ -272,6 +274,7 @@ function close_button_no_effect()
 function close_popup(num9)
 {
 	handler[num9]++;
+	document.getElementById("popup-title").innerHTML="";
 	document.getElementsByClassName("popup-Container")[0].style.display="none";
 }
 //                                          <<<<
