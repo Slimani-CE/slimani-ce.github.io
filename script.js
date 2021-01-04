@@ -1,6 +1,35 @@
 var image_set=document.getElementsByClassName("image-set");
 var check=document.getElementsByClassName("check");
 var image_set_table=[false,false,false,false];
+
+//Dark mode                                                             >>>>
+var dark_mode_button=document.getElementById("dark_mode");
+var dark_mode_button_check=document.getElementById("dark_mode_check");
+var dark_mode_text=document.getElementById("dark_mode_text");
+dark_mode_button.addEventListener("click",dark_mode_func);
+var dark_mode_event=false;
+
+
+function dark_mode_func(){
+	if(!dark_mode_event)
+	{
+		dark_mode_button_check.style=("margin-left: 45px;");
+		dark_mode_button.style=("background-color:rgba(44, 46, 73,1)");
+		// dark_mode_text.innerHTML="Dark mode on";
+		dark_mode_event=true;
+		alert("Developed in futer inshallah!");
+	}
+	else
+	{
+		dark_mode_button_check.style=null;
+		dark_mode_button.style=null;
+		dark_mode_event=false;
+		// dark_mode_text.innerHTML="Enable Dark Mode!";
+	}
+}
+//                          										    >>>>
+
+
 for (var i = 0; i<image_set.length; i++)
 {
 	check[i].addEventListener("click",clickhandler_imageset.bind(null,i));

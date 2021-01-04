@@ -10,6 +10,8 @@ body
 * {
   box-sizing: border-box;
 }
+
+
 #title
 {
 	color: #e2d546 ;
@@ -46,6 +48,38 @@ body
 	background-position: center;
 }
 
+#dark_mode{
+	width: 80px;
+	height:40px;
+	background-color: rgba(161, 170, 170, 1);
+	float: right;
+	border-radius: 25px;
+	cursor: pointer;
+	right: 0;
+}
+#dark_mode_check{
+	background-color:white;
+	position: relative;
+	width: 30px;
+	height: 30px;
+	border-radius: 25px;
+	margin-top: 5px;
+	margin-left: 5px;
+	transition: .3s;
+}
+
+#dark_mode_text{
+
+	font-family: "Ubuntu", sans-serif;
+	border: 0;
+	text-align: left;
+	position: relative;
+	background-color: transparent;
+	width: 20% ;
+	margin: 0;
+	float: right;
+	color: rgba(44, 46, 73, 1);
+}
 .itachi1-class
 {
 	width: 100%;
