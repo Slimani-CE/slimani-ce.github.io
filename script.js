@@ -17,7 +17,7 @@ function dark_mode_func(){
 		dark_mode_button.style=("background-color:rgba(44, 46, 73,1)");
 		// dark_mode_text.innerHTML="Dark mode on";
 		dark_mode_event=true;
-		alert("Developed in futer inshallah!");
+		alert("Developed in future inshallah!");
 	}
 	else
 	{
