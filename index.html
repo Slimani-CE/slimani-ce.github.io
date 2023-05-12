@@ -1,231 +1,150 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Slimani</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <!-- <link rel="stylesheet" type="text/css" href="dark_style.css"> -->
-  <!-- <meta http-equiv="refresh" content="1"> -->
-  <link rel="icon" href="images/hat.png" type="image/gif" sizes="16x16">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,500&display=swap');
-  </style>
-  </head>
-  <body>
+        <link rel="stylesheet" href="assets/css/styles.css">
+        
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-<div class="Container">
-    <p id="dark_mode_text">Enable Dark Mode!</p>
-    <div id="dark_mode">
-      <div id="dark_mode_check"> </div>
-    </div>
-    <div class="intro">
-      <h1 id="title">Welcome to Slimani's first project</h1>
-      <button onclick="alert('It\'s working')" title="Click to load creativity" class="button1"  >Loading creativity</button>
-    </div>
-    <p>TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST </p>
-    <button class="button1" onclick="alert('good')">Click Me !</button>
-    <picture >
-      <source media="(min-width: 900px)" srcset="images/itachi-1.png">
-        <source media="(min-width: 700px)" srcset="images/itachi-3.jpg">
-        <img class="itachi1-class"  src="images/itachi-2.png">
-    </picture>
-    <table class="table">
-        <tr>
-          <th colspan="2">Name</th>
-          <th>Age</th>
-        </tr>
-        <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-        </tr>
-        <tr>
-          <td>Eve</td>
-          <td>Jackson</td>
-          <td>94</td>
-        </tr>
-        <tr>
-          <td>Eve</td>
-          <td>Jackson</td>
-          <td>94</td>
-        </tr><tr>
-          <td>Eve</td>
-          <td>Jackson</td>
-          <td>94</td>
-        </tr><tr>
-          <td>Eve</td>
-          <td>Jackson</td>
-          <td>94</td>
-        </tr>
-    </table>
-    <table class="table-1">
-        <tr>
-          <th colspan="2">Name</th>
-          <th>Age</th>
-        </tr>
-        <tr>
-            <td rowspan="2">Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-        </tr>
-        <tr>
-          <td>Jackson</td>
-          <td>94</td>
-        </tr>
-        <tr>
-          <td>Eve</td>
-          <td rowspan="2">Jackson</td>
-          <td rowspan="3">94</td>
-        </tr><tr>
-          <td>Eve</td>
-        </tr><tr>
-          <td>Eve</td>
-          <td>Jackson</td>
-        </tr>
-    </table>
-    <div class="Liste-1">
-    	<div class="list-set">
-      	<ul class="todo-liste" >
-			<div class="item-delete-button">D</div>     		
-      		<div class="item-add-button">+</div>
-      		<div class="item-change-button">C</div>			
-        	<li class="li-list">Study
-          		<ol type="1" class="ol-list">
-            		<li>JS</li>
-            		<li>C++</li>
-            		<li>Design</li>
-            		<li>Social Engineering</li>
-         		</ol>
-        	</li>
-			<div class="item-delete-button">D</div>
-        	<div class="item-add-button">+</div>
-        	<div class="item-change-button">C</div>
-        	<li class="li-list">Work Out
-          		<ol type="1" class="ol-list">
-            		<li>gym</li>
-            		<li>street walking</li>
-         		</ol>
-        	</li>
-			<div class="item-delete-button">D</div>
-        	<div class="item-add-button">+</div>
-        	<div class="item-change-button">C</div>
-        	<li class="li-list">Read
-          		<ol type="1" class="ol-list">
-            		<li title="it's an arabic book">ملائك نصيبين</li>
-            		<li>The Art of Human Hacking
-            		<li>Quran</li>
-            		<li>rich dad poor dad</li>
-         		</ol>
-        	</li>
-			<div class="item-delete-button">D</div>
-        	<div class="item-add-button">+</div>
-        	<div class="item-change-button">C</div>
-        	<li class="li-list">Eat
-          		<ol type="1" class="ol-list">
-            		<li>Breakfast</li>
-            		<li>Lunch</li>
-            		<li>Snacks</li>
-            		<li>Dinner</li>
-         		</ol>
-        	</li>
-      	</ul>
-      	<div class="new-item-class">
-        	<label for="new-item">add new item:</label>
-        	<input class="placeholder" type="text" name="new-item" value="add new item" id="new-item">
-        	<button id="new-item-button" class="button-style-1">Submit!</button>
-        	<button id="delete-button" class="button-style-1">Delete list!</button>
-        </div>
-        </div>
-     	<div class="webpage">
-            <img src="images/itachi-1.png" class="image">
-        	<img src="images/itachi-2.png" class="image">
-        	<img src="images/itachi-3.jpg" class="image">
-        	<img src="images/itachi-4.png" class="image">
-     	</div>
-    </div>
-   	<div class="form-holder">
-   		<form class="form-holder-1" action="#" target="_blank">
-   			<h2>Please type your personal informations!</h2>
-   			<div class="user-info">
-   				<label for="fname">First name:</label>
-				  <input type="text" id="fname" name="fname" ><br>
-				  <label for="lname">Last name :</label>
-				  <input type="text" id="lname" name="lname" ><br>
-				  <label for="uname">User name :</label>
-				  <input type="text" id="uname" name="uname" ><br>
-          <label for="City">City    :</label>
-          <select id="City" name="City">
-            <option value="none">Select your city</option>
-            <option value="Rabat">Rabat</option>
-            <option value="Errachidia">Errachidia</option>
-            <option value="Fes">Fes</option>
-            <option value="Meknes">Meknes</option>
-          </select>
-   			</div>
-   			<div class="form-1">
-   				<h3>Vihicule informations</h3>
-  				<input type="checkbox" id="vehicle1" name="vehicle" value="Bike">
-  				<label for="vehicle1"> I have a bike</label><br>
-  				<input type="checkbox" id="vehicle2" name="vehicle" value="Car">
-  				<label for="vehicle2"> I have a car</label><br>
-  				<input type="checkbox" id="vehicle3" name="vehicle" value="Boat">
-  				<label for="vehicle3"> I have a boat</label>
-   			</div>
+        <title>Mustapha SLIMANI</title>
 
-   			<div class="form-1">
-   				<h3>House informations</h3>
-  				<input type="radio" id="House1" value="House" name="House" >
-  				<label for="House1"> I have a house</label><br>
-  				<input type="radio" id="House2" value="Villa" name="House">
-  				<label for="House2"> I have a Villa</label><br>
-  				<input type="radio" id="House3" value="Castle" name="House" >
-  				<label for="House3"> I have a Castle</label>
-   			</div>
-   			<div class="form-pics">
-   				<div class="image-set">
-   					<label for="image1">
-   					<img src="images/itachi-1.png" class="image form-image">
-   					</label>
-   					<input type="checkbox" id="image1" class="check" name="itachi-pic" value="image1">
-   				</div>
-   				<div class="image-set">
-   					<label for="image2">
-   					<img src="images/itachi-2.png" id="form-pic" class="image form-image">
-   					</label>
-   					<input type="checkbox" id="image2" class="check" name="itachi-pic" value="image2">
-   				</div>
-   				<div class="image-set">
-   					<label for="image3">
-   					<img src="images/itachi-3.jpg" class="image form-image">
-   					</label>
-   					<input type="checkbox" id="image3" class="check" name="itachi-pic" value="image3">
-   				</div>
-   				<div class="image-set">
-   					<label for="image4">
-   					<img src="images/itachi-4.png" class="image form-image">
-   					</label>
-   					<input type="checkbox" id="image4"  class="check" name="itachi-pic" value="image4">
-   				</div>
+        <!-- Favicon -->
+        <link rel="icon" href="assets/img/about.jpg" type="image/gif" sizes="16x16">
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Mustapha</a>
+                </div>
 
-     		</div>
-   			<input class="button1" type="submit" name="Submit">
-		</form>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <!-- <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li> -->
+                        <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
 
-    <textarea id="textarea" name="message" rows="10" cols="100">The cat was playing in the garden.</textarea>
-   	</div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
 
-    
-  </div>
-  <div class="popup-Container">
-  	<div class="popup-modal">
-      <p id="close-button">+</p>
-      <h2 id="popup-intro">Adding new item to your list!</h2>
-      <h2 id="popup-title" ></h2>
-  		<input class="popup-input placeholder" type="text" name="item" id="item" placeholder="Type new item">
-  		<button class="button1 popup-button">Submite</button>
-  	</div>
-  </div>
-  <script type="text/javascript" src="script.js"></script> 
-  </body>                            
-  </html>                             
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Mustapha</span></h1>
+
+                    <a href="#" class="button">Contact</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
+                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                </div>
+
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="30" y="20" href="assets/img/profile.png"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/about.jpg" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I am Mustapha SLIMANI</h2>
+                        <p class="about__text">I am a master's student in distributed systems and artificial intelligence. I am passionate about AI and ML and have been learning machine learning techniques to apply in real-world projects. Along with that, I also have experience in software engineering, particularly in developing with Java using JavaFX and the Spring framework. My expertise also includes developing distributed microservices and web services using SOAP, REST API, GraphQL, and gRPC. Additionally, I am proficient in web development using JS, PHP, CSS, and HTML.</p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            
+
+
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Projects</h2>
+
+                <div class="work__container bd-grid">
+                    <a href="" class="work__img">
+                        <img src="assets/img/work1.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/work2.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/work3.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/work4.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/work5.jpg" alt="">
+                    </a>
+                    <a href="" class="work__img">
+                        <img src="assets/img/work6.jpg" alt="">
+                    </a>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="https://formsubmit.co/99d61ce29c71b01f3b1e514ccb7cbcac" method="POST">
+                        <input type="text" placeholder="Name" name="name" class="contact__input">
+                        <input type="mail" placeholder="Email" name="email" class="contact__input">
+                        <textarea placeholder="Écrivez-nous vos pensées" cols="0" rows="10" class="contact__input" name="userMsg" id="userMsg" cols="30" rows="10" spellcheck="false" data-ms-editor="true"></textarea>
+                        <input type="hidden" name="_next" value="http://127.0.0.1:5500/portfolio-responsive-complete/thanks.html">
+                        <input type="hidden" name="_captcha" value="false">
+                    
+                        <input type="submit" value="Send" class="contact__button button">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Mustapha SLIMANI</p>
+            <div class="footer__social">
+                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+            </div>
+            <p class="footer__copy">&#169; Slimani-ce. All rigths reserved</p>
+        </footer>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
