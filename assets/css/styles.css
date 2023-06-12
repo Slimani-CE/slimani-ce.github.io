@@ -392,66 +392,50 @@ img {
 .work__container {
   row-gap: 2rem;
 }
-
 .work__img {
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
-  border-radius: .5rem;
+  /* border: 2px solid rgba(23, 114, 240, 0.6); */
+  box-shadow: 0px 4px 7px rgba(23, 114, 240, 0.5);
+  border-radius: 1rem;
   overflow: hidden;
   height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .work__img:hover {
-  box-shadow: 0px 4px 25px rgba(23, 114, 240, 0.516);
+  box-shadow: 0px 0px 3px rgba(23, 114, 240, 0.8);
   overflow: hidden;
 }
 
-.work__img img {
-  transition: 1s;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+.post-image {
+  height: 70%;
+  border-radius: 5px;
 }
 
-.work__img img:hover {
-  /* transform: scale(1.04); */
-}
-/* Post title */
-.work__img .post-title{
-  padding: 5px;
-  color: var(--first-color);
-  text-align: justify;
-  font-size: 13px;
-  font-weight: lighter;
-  color: #333;
-}
-.work__img {
-  position: relative;
-  display: inline-block;
-}
 
 .post-title {
   position: absolute;
   bottom: 0;
   left: 0;
   padding: 10px;
-  height: 70px;
   background-color: white;
-  width: 100%;
   box-sizing: border-box;
   margin: 0;
-  font-weight: bold;
-  font-size: 16px;
+  overflow: hidden;
+  font-weight: lighter;
   color: #333;
-  text-align: center;
+  width: 100%;
+  font-size: 13px;
+  display: -webkit-box; 
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; 
+  text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  height: 30%;
+  text-align: justify;
 }
 
-.post-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
 
 /* ===== CONTACT =====*/
 .contact__input {
