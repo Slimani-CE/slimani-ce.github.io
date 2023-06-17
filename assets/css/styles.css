@@ -411,15 +411,12 @@ img {
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 114, 176, 0.5), #5F0A87);
+  background: linear-gradient(to bottom, rgba(0, 114, 176, 0.3), #320447);
   z-index: 2;
   transition: 1s all;
-  opacity: 0;
+  opacity: 0.8;
 }
 
-.card:hover:before{
-  opacity: 1;
-}
 
 .card img{
   width: 100%;
@@ -434,15 +431,9 @@ img {
   position: relative;
   z-index: 3;
   color: #fff;
-  opacity: 0;
-  transform: translateY(30px);
   transition: 0.5s all;   
 }
 
-.card:hover .info{
-  opacity: 1;
-  transform: translateY(0px);
-}
 
 .card .info h1{
   margin: 0;
