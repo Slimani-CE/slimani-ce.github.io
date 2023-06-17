@@ -400,7 +400,8 @@ img {
 }
 
 .card:hover{
-  transform: translateY(5px);
+  transform: translateY(-5px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .card:before{
@@ -431,7 +432,6 @@ img {
   position: relative;
   z-index: 3;
   color: #fff;
-  transition: 0.5s all;   
 }
 
 
