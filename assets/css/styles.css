@@ -100,7 +100,7 @@ img {
 
 /*===== LAYOUT =====*/
 .bd-grid {
-  max-width: 1024px;
+  max-width: 1100px;
   display: grid;
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
@@ -389,8 +389,8 @@ img {
 
 /* ===== WORK =====*/
 .card{
-  width: 300px;
-  height: 350px;
+  width: 350px;
+  height: 400px;
   padding: 2rem 1rem;
   background: #fff;
   position: relative;
@@ -432,6 +432,10 @@ img {
   position: relative;
   z-index: 3;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
 
@@ -441,11 +445,27 @@ img {
 
 .card .info p{
   letter-spacing: 1px;
-  font-size: 15px;
+  font-size: 14px;
   margin-top: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
-
+.card .info h1{
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+.card .info .tech_stack{
+  max-width: 100%;
+  margin-bottom: 10px;
+  line-height: 30px;
+}
+.card .info .tech_stack span{
+  font-size: 11px;
+  padding: 5px;
+  border: 2px solid #575eeb;
+  border-radius: 15px;
+  color: #575eeb;
+  background-color: #2a2837;
+}
 .card .info .btn{
   text-decoration: none;
   padding: 0.5rem;
