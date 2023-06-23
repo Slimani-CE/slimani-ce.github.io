@@ -461,10 +461,10 @@ img {
 .card .info .tech_stack span{
   font-size: 11px;
   padding: 5px;
-  border: 2px solid #575eeb;
-  border-radius: 15px;
-  color: #575eeb;
-  background-color: #2a2837;
+  border: 2px solid #e3f18d;
+  border-radius: 12px;
+  color: #e3f18d;
+  background-color: #383838;
 }
 .card .info .btn{
   text-decoration: none;
