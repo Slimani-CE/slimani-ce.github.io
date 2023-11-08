@@ -743,6 +743,26 @@ img {
   }
 }
 
+.languages {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.languages a {
+  color: #0d1730;
+  cursor: pointer;
+}
+
+.languages span {
+  color: var(--first-color);
+}
+
+.languages span a:hover {
+  color: var(--first-color);
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 992px) {
   .bd-grid {
     margin-left: auto;
