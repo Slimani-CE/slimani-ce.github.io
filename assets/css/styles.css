@@ -251,7 +251,7 @@ img {
 }
 
 .home__blob-img {
-  width: 450px;
+  width: 500px;
 
 }
 
@@ -315,9 +315,10 @@ img {
   border-radius: .5rem;
 }
 .about__text{
-  font-size: 18px;
+  font-size: 22px;
   font-family: 'Poppins', sans-serif;
   text-align: justify;
+  line-height: 180%;
 }
 
 /* ===== SKILLS =====*/
