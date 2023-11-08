@@ -67,11 +67,21 @@ function toggleTheme(el) {
   if (el.classList.contains("dark")) {
     el.classList.remove("dark");
     el.classList.add("light");
+    el.dataset.mode = "light";
   } else {
     el.classList.remove("light");
     el.classList.add("dark");
+    el.dataset.mode = "dark";
   }
   Array.from(el.children[0].children).forEach((c) => {
     c.classList.toggle("hidden");
   });
+  localStorage.setItem(
+    "theme",
+    el.classList.contains("dark") ? "dark" : "light"
+  );
 }
+
+const theme = localStorage.getItem("theme");
+const el = document.getElementById("theme-toggle");
+if (theme !== el.dataset.mode) toggleTheme(el);

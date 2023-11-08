@@ -752,10 +752,26 @@ img {
 .languages a {
   color: #0d1730;
   cursor: pointer;
+  font-weight: 400;
 }
 
 .languages span {
   color: var(--first-color);
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.languages span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  margin-bottom: -4px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--first-color);
 }
 
 .languages span a:hover {
@@ -797,6 +813,11 @@ body.dark-theme .l-header {
 
 body.dark-theme .nav__link {
   color: white;
+}
+
+body.dark-theme .languages a {
+  color: white;
+  cursor: pointer;
 }
 
 body.dark-theme .nav__link:hover::after {

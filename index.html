@@ -18,7 +18,7 @@
     <link rel="icon" href="assets/img/avatar.png" type="image/gif" sizes="16x16">
 </head>
 
-<body class=".contact__input">
+<body class=".contact__input dark-theme">
     <!--===== HEADER =====-->
     <header class="l-header">
         <nav class="nav bd-grid">
@@ -42,10 +42,10 @@
             </div>
             <div class="theme-switcher-container">
                 <span>Theme</span>
-                <div class="theme-switcher" onclick="toggleTheme(this)">
+                <div class="theme-switcher dark" id="theme-toggle" data-mode="dark" onclick="toggleTheme(this)">
                     <div class="switcher-btn">
-                        <i class="fa-solid fa-sun"></i>
-                        <i class="fa-solid fa-moon hidden"></i>
+                        <i class="fa-solid fa-sun hidden"></i>
+                        <i class="fa-solid fa-moon"></i>
                     </div>
                 </div>
             </div>
