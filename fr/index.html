@@ -81,7 +81,7 @@
             </div>
 
             <div class="home__img">
-                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
+                <svg class="home__blob" viewBox="0 0 479 467" width="400" height="400"
                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     <mask id="mask0" mask-type="alpha">
                         <path
@@ -114,177 +114,206 @@
             </div>
         </section>
 
-        <!--===== SKILLS =====-->
-        <!-- <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
-
-            <div class="skills__container bd-grid">
-                <div>
-                    <h2 class="skills__subtitle">Profesional Skills</h2>
-                    <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id
-                        vero amet, alias architecto consectetur error eum eaque sit.</p>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-html5 skills__icon'></i>
-                            <span class="skills__name">HTML5</span>
-                        </div>
-                        <div class="skills__bar skills__html">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">95%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-css3 skills__icon'></i>
-                            <span class="skills__name">CSS3</span>
-                        </div>
-                        <div class="skills__bar skills__css">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">85%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-javascript skills__icon'></i>
-                            <span class="skills__name">JAVASCRIPT</span>
-                        </div>
-                        <div class="skills__bar skills__js">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">65%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxs-paint skills__icon'></i>
-                            <span class="skills__name">UX/UI</span>
-                        </div>
-                        <div class="skills__bar skills__ux">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">85%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                </div>
-            </div>
-        </section> -->
-
-
-
         <!--===== WORK =====-->
         <section class="work section" id="work">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">Projets</h2>
 
             <div class="work__container bd-grid ">
-                <div class="card">
-                    <img src="../assets/img/work7.png" alt="">
-                    <div class="info">
-                        <h1 class="info">Classificateur de chiffres manuscrits</h1>
-                        <p>Entraînement d'un réseau neuronal artificiel pour classer des chiffres manuscrits.</p>
-                        <div class="tech_stack">
-                            <span>Python</span> <span>Numpy</span> <span>Tensorflow</span> <span>FastAPI</span>
-                            <span>HTML5</span> <span>CSS3</span> <span>JAVASCRIPT</span>
+                <div class="project-card">
+                    <a href="https://github.com/Slimani-CE/distributed-systems" target="_blank">
+                        <div class="img-container">
+                            <img src="../assets/img/thumbnail12.png" alt="picture">
+                            <div class="modal">
+                                <button class="second-btn">Voir le code</button>
+                            </div>
                         </div>
-                        <a href="https://slimani-ce.github.io/digit-classifier.github.io/" target="_blank"
-                            class="btn">En savoir plus</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="../assets/img/work4.png" alt="">
-                    <div class="info">
-                        <h1 class="info">Algorithme Q-Learning</h1>
-                        <p>Implémentation de l'algorithme Q-Learning avec Java et JavaFX</p>
-                        <div class="tech_stack">
-                            <span>Java</span> <span>JavaFX</span>
+                    </a>
+                    <div class="card-body">
+                        <h3>Système de Gestion de Radar Distribué</h3>
+                        <div class="badges">
+                            <span>SPRING</span> <span>REST</span> <span>gRPC</span>
+                            <span>ANGULAR</span><span>TypeScript</span>
                         </div>
-                        <a href="https://github.com/Slimani-CE/qlearning" target="_blank" class="btn">En savoir plus</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="../assets/img/work6.png" alt="">
-                    <div class="info">
-                        <h1 class="info">Classificateur de fausses nouvelles</h1>
-                        <p>Un classificateur de fausses nouvelles utilisant la Régression Logistique et un service API
-                            REST pour consommer ce modèle.</p>
-                        <div class="tech_stack">
-                            <span>Python</span> <span>Numpy</span> <span>Pandas</span> <span>NLTK</span>
-                            <span>Sickit-Learn</span> <span>REGEX</span> <span>Pickle</span> <span>FastAPI</span>
-                        </div>
-                        <a href="https://github.com/Slimani-CE/fake-news-classifier" target="_blank" class="btn">En
-                            savoir plus</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="../assets/img/work5.png" alt="">
-                    <div class="info">
-                        <h1 class="info">Algorithme génétique</h1>
-                        <p>Un algorithme d'optimisation stochastique inspiré par la sélection naturelle et la génétique.
+                        <p>Ce projet est un système distribué simulant un système radar avec trois microservices :
+                            enregistrement, infraction et radar. Il comprend un client Java gRPC et une application
+                            Angular pour l'interface utilisateur.
                         </p>
-                        <div class="tech_stack">
-                            <span>Java</span> <span>JavaFX</span>
+                        <div class="card-footer">
+                            <a href="https://github.com/Slimani-CE/distributed-systems" target="_blank"><button
+                                    class="second-btn">Voir le code</button></a>
                         </div>
-                        <a href="https://github.com/Slimani-CE/genetic-algorithm" target="_blank" class="btn">En savoir
-                            plus</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <a href="https://github.com/Slimani-CE/ecom-app-main" target="_blank">
+                        <div class="img-container">
+                            <img src="../assets/img/thumbnail11.png" alt="picture">
+                            <div class="modal">
+                                <button class="second-btn">Voir le code</button>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="card-body">
+                        <h3>Ecom-App : Une application web Spring distribuée</h3>
+                        <div class="badges">
+                            <span>JAVA</span><span>SPRING</span><span>REST
+                                API</span><span>ANGULAR</span><span>TypeScript</span>
+                        </div>
+                        <p>Ecom-App est une application modulaire et distribuée composée de plusieurs microservices,
+                            chacun étant responsable d'un aspect spécifique de la plateforme de commerce électronique.
+                            Ces microservices collaborent pour offrir une expérience d'achat fluide et efficace.
+                        </p>
+                        <div class="card-footer">
+                            <a href="https://github.com/Slimani-CE/ecom-app-main" target="_blank"><button
+                                    class="second-btn">Voir le code</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <a href="https://slimani-ce.github.io/front-end-mentor-ch15/" target="_blank">
+                        <div class="img-container">
+                            <img src="../assets/img/thumbnail1.webp" alt="picture">
+                            <div class="modal">
+                                <!-- <img src="https://slimani-ce.github.io/front-end-mentor-ch4/images/icon-view.svg" alt=""> -->
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="card-body">
+                        <h3>Where in the world ?: Une application web utilisant l'API REST</h3>
+                        <div class="badges">
+                            <span>JS</span><span>HTML</span><span>CSS</span><span>API</span>
+                        </div>
+                        <p>Une application web permettant aux utilisateurs de rechercher et consulter des informations
+                            sur les pays. Elle inclut des fonctionnalités telles que le filtrage par région, le
+                            basculement entre les thèmes sombres et clairs, ainsi que l'affichage d'informations
+                            détaillées sur les pays sélectionnés.
+                        </p>
+                        <div class="card-footer">
+                            <a href="https://github.com/Slimani-CE/front-end-mentor-ch15" target="_blank"><button
+                                    class="second-btn">Voir le code</button></a>
+                            <a href="https://slimani-ce.github.io/front-end-mentor-ch15/"
+                                target="_blank"><button>Explorer</button></a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card">
-                    <img src="../assets/img/work1.jpg" alt="">
-                    <div class="info">
-                        <h1 class="info">Analyse du jeu de données du Titanic 2021</h1>
-                        <p>Analyse du jeu de données du Titanic 2021 et prédiction de survie avec différents modèles
-                            d'apprentissage automatique.</p>
-                        <div class="tech_stack">
-                            <span>Python</span> <span>Pandas</span> <span>Matplotlib</span> <span>Seaborn</span>
-                            <span>Tensorflow</span> <span>Sickit-Learn</span>
+                <div class="project-card">
+                    <a href="https://slimani-ce.github.io/rock-paper-scissors-webapp/" target="_blank">
+                        <div class="img-container">
+                            <img src="../assets/img/thumbnail2.webp" alt="picture">
+                            <div class="modal">
+                                <!-- <img src="https://slimani-ce.github.io/front-end-mentor-ch4/images/icon-view.svg" alt=""> -->
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
                         </div>
-                        <a href="projects/Titanic-2021-dataset-analyse.html" target="_blank" class="btn">En savoir
-                            plus</a>
+                    </a>
+                    <div class="card-body">
+                        <h3>Jeu pierre-feuille-ciseaux : un jeu web réactif</h3>
+                        <div class="badges">
+                            <span>JS</span><span>HTML</span><span>CSS</span>
+                        </div>
+                        <p>Un jeu de Pierre-Papier-Ciseaux visuellement attrayant et réactif basé sur le web. Il intègre
+                            des couleurs vives, des éléments de jeu interactifs et un modal de règles pour offrir une
+                            expérience utilisateur agréable. Le code CSS garantit que l'interface du jeu est à la fois
+                            élégante et adaptable à différentes tailles d'écran.
+                        </p>
+                        <div class="card-footer">
+                            <a href="https://github.com/Slimani-CE/rock-paper-scissors-webapp" target="_blank"><button
+                                    class="second-btn">Voir le code</button></a>
+                            <a href="https://slimani-ce.github.io/rock-paper-scissors-webapp/"
+                                target="_blank"><button>Explorer</button></a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card">
-                    <img src="../assets/img/work2.jpg" alt="">
-                    <div class="info">
-                        <h1 class="info">Classificateur de signaux sonar</h1>
-                        <p>Classification des signaux sonar en deux catégories, roches ou mines, en utilisant
-                            l'algorithme de régression logistique.</p>
-                        <div class="tech_stack">
-                            <span>Python</span> <span>Pandas</span> <span>Sickit-Learn</span> <span>Matplotlib</span>
-                            <span>Seaborn</span>
+                <div class="project-card">
+                    <a href="https://slimani-ce.github.io/front-end-mentor-ch14/" target="_blank">
+                        <div class="img-container">
+                            <img src="../assets/img/thumbnail3.webp" alt="picture">
+                            <div class="modal">
+                                <!-- <img src="https://slimani-ce.github.io/front-end-mentor-ch4/images/icon-view.svg" alt=""> -->
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
                         </div>
-                        <a href="https://github.com/Slimani-CE/sonar-rock-vs-mine-prediction" target="_blank"
-                            class="btn">En savoir plus</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../assets/img/work3.jpg" alt="">
-                    <div class="info">
-                        <h1 class="info">Prédiction du diabète</h1>
-                        <p>Modèle de machine à vecteurs de support (SVM) pour prédire le diabète en utilisant le jeu de
-                            données sur le diabète des Indiens Pima.</p>
-                        <div class="tech_stack">
-                            <span>Python</span> <span>Pandas</span> <span>Sickit-Learn</span> <span>Matplotlib</span>
-                            <span>Seaborn</span>
+                    </a>
+                    <div class="card-body">
+                        <h3>Calculateur d'Indice de Masse Corporelle (IMC)</h3>
+                        <div class="badges">
+                            <span>JS</span><span>HTML</span><span>CSS</span>
                         </div>
-                        <a href="https://github.com/Slimani-CE/diebetes-prediction" target="_blank" class="btn">En
-                            savoir plus</a>
+                        <p>Comprenez mieux votre poids par rapport à votre taille en utilisant notre calculateur
+                            d'Indice de Masse Corporelle (IMC). Bien que l'IMC ne soit pas le seul déterminant d'un
+                            poids sain, il offre un point de départ précieux pour évaluer votre santé et votre bien-être
+                            général
+                        </p>
+                        <div class="card-footer">
+                            <a href="https://github.com/Slimani-CE/front-end-mentor-ch14" target="_blank"><button
+                                    class="second-btn">Voir le code</button></a>
+                            <a href="https://slimani-ce.github.io/front-end-mentor-ch14/"
+                                target="_blank"><button>Explorer</button></a>
+                        </div>
                     </div>
                 </div>
 
+                <div class="project-card">
+                    <a href="https://slimani-ce.github.io/front-end-mentor-ch13/" target="_blank">
+                        <div class="img-container">
+                            <img src="../assets/img/thumbnail4.webp" alt="picture">
+                            <div class="modal">
+                                <!-- <img src="https://slimani-ce.github.io/front-end-mentor-ch4/images/icon-view.svg" alt=""> -->
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="card-body">
+                        <h3>Application de génération de mots de passe</h3>
+                        <div class="badges">
+                            <span>JS</span><span>HTML</span><span>CSS</span>
+                        </div>
+                        <p>Une application web réactive qui génère un mot de passe aléatoire en fonction des critères
+                            sélectionnés par l'utilisateur. Elle permet aux utilisateurs de spécifier la longueur du mot
+                            de passe ainsi que s'il doit inclure des lettres majuscules et minuscules, des chiffres et
+                            des symboles
+                        </p>
+                        <div class="card-footer">
+                            <a href="https://github.com/Slimani-CE/front-end-mentor-ch13" target="_blank"><button
+                                    class="second-btn">Voir le code</button></a>
+                            <a href="https://slimani-ce.github.io/front-end-mentor-ch13/"
+                                target="_blank"><button>Explorer</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <a href="https://slimani-ce.github.io/advice-generator-app/" target="_blank">
+                        <div class="img-container">
+                            <img src="../assets/img/thumbnail.webp" alt="picture">
+                            <div class="modal">
+                                <!-- <img src="https://slimani-ce.github.io/front-end-mentor-ch4/images/icon-view.svg" alt=""> -->
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="card-body">
+                        <h3>Application de génération de conseils
+                        </h3>
+                        <div class="badges">
+                            <span>JS</span><span>HTML</span><span>CSS</span><span>API</span>
+                        </div>
+                        <p>Répertoire de l'application Générateur de Conseils ! Cette application web offre une
+                            inspiration instantanée d'un simple clic. Un design élégant, une mise en page réactive et
+                            une interface conviviale rendent la sagesse accessible à tous. Explorez et partagez la joie
+                            !
+                        </p>
+                        <div class="card-footer">
+                            <a href="https://github.com/Slimani-CE/advice-generator-app" target="_blank"><button
+                                    class="second-btn">Voir le code</button></a>
+                            <a href="https://slimani-ce.github.io/advice-generator-app/"
+                                target="_blank"><button>Explorer</button></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 

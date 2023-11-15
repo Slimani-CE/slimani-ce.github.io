@@ -1,5 +1,6 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
@@ -8,12 +9,17 @@
   /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
   /* HSL color mode */
   --hue-color: 224;
-  --first-color: #fc8650;
-  --second-color: hsl(var(--hue-color), 56%, 12%);
-  --first-dark-color: #fe9627;
+  --first-color: #036cc8;
+  --second-color: #0d1730;
+  --third-color: rgb(219, 219, 219);
+  --light-blue: hsl(194, 35%, 93%);
+  --first-dark-color: #51a5ff;
   --second-dark-color: hsl(194, 35%, 93%);
+  --dark-bg-color: #18181b;
+  --header-bg-color: #18181b;
+  /* --dark-footer-color: #2c2c41; */
   /*===== Fuente y tipografia =====*/
-  --body-font: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
@@ -40,6 +46,8 @@
 /*===== BASE =====*/
 *, ::before, ::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -106,7 +114,7 @@ img {
 
 /*===== LAYOUT =====*/
 .bd-grid {
-  max-width: 1100px;
+  max-width: 1200px;
   display: grid;
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
@@ -210,7 +218,7 @@ img {
   width: 24px;
   height: 24px;
   margin: 3px;
-  background-color: #0d1730;
+  background-color: var(--dark-bg-color);
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -243,6 +251,7 @@ img {
   position: relative;
   row-gap: 5rem;
   padding: 4rem 0 5rem;
+  margin-top: 50px;
 }
 
 .home__data {
@@ -444,9 +453,163 @@ img {
 } */
 
 /* ===== WORK =====*/
+.project-card {
+  width: 350px;
+  height: 480px;
+  border: 1px solid var(--third-color);
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.project-card:hover {
+  transform: rotate(1deg);
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.project-card:not(:hover) {
+  transition: all 0.3s ease-in-out;
+}
+
+.project-card .img-container {
+  position: relative;
+  display: flex;
+}
+
+.project-card .img-container .modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.project-card .img-container .modal i{
+  font-size: 64px;
+  color: #e2eaf0;
+}
+
+.project-card .img-container:hover .modal {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 108, 200, 0.4);
+}
+
+.project-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.project-card .card-body {
+  flex: 1;
+  color: var(--second-color);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  position: relative;
+}
+
+.project-card .card-body > h3 {
+  min-height: 50px;
+  color: var(--second-color);
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-card .card-body > p {
+  color: var(--second-color);
+  font-size: 14px;
+  line-height: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-card .card-body .badges {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5px;
+  row-gap: 5px;
+}
+
+.project-card .card-body .badges span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 22px;
+  height: 22px;
+  font-size: 10px;
+  border-radius: 11px;
+  padding: 0 5px;
+  border: 2px solid rgb(92, 97, 242);
+  color: rgb(92, 97, 242);
+}
+
+.project-card .card-body .card-footer {
+  width: calc(100% - 25px);
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 10px;
+}
+
+.project-card .card-body .card-footer button {
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--first-color);
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--second-color);
+}
+
+.modal button.second-btn {
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #EDEDED;
+  cursor: pointer;
+  border: none;
+  color: var(--first-color);
+}
+
+.modal button.second-btn:hover {
+  background-color: var(--light-blue);
+}
+
+.project-card .card-body .card-footer button:hover {
+  background-color: var(--first-color);
+  color: white;
+}
+
+.project-card .card-body .card-footer button.second-btn {
+  border: none;
+  color: var(--first-color);
+}
+
+.project-card .card-body .card-footer button.second-btn:hover {
+  background-color: var(--light-blue);
+}
+
 .card{
   width: 350px;
-  height: 400px;
+  height: 450px;
+  border-radius: 15px;
   padding: 2rem 1rem;
   background: #fff;
   position: relative;
@@ -608,8 +771,9 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: var(--second-color);
+  background-color: hsl(var(--hue-color), 56%, 12%);
   color: #fff;
+  border-top: 1px solid #AAA;
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
@@ -750,7 +914,7 @@ img {
 }
 
 .languages a {
-  color: #0d1730;
+  color: var(--dark-bg-color);
   cursor: pointer;
   font-weight: 400;
 }
@@ -794,7 +958,7 @@ img {
 
 /* DARK THEME CSS SECTION (START)*/
 body.dark-theme {
-  background-color: #0d1730;
+  background-color: var(--dark-bg-color);
   color: var(--second-dark-color);
 }
 
@@ -807,7 +971,7 @@ body.dark-theme .section-title::after {
 }
 
 body.dark-theme .l-header {
-  background-color: #120d30;
+  background-color: var(--header-bg-color);
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
@@ -842,7 +1006,7 @@ body.dark-theme .home__blob {
 
 body.dark-theme .button {
   background-color: var(--first-dark-color);
-  color: #0d1730;
+  color: var(--dark-bg-color);
   border: 2px solid var(--first-dark-color);
 }
 
@@ -869,7 +1033,7 @@ body.dark-theme .theme-switcher > .switcher-btn {
 }
 
 body.dark-theme .theme-switcher > .switcher-btn > i {
-  color: #0d1730;
+  color: var(--dark-bg-color);
 }
 
 body.dark-theme .home__title-color {
@@ -878,7 +1042,7 @@ body.dark-theme .home__title-color {
 
 body.dark-theme .button-alt:hover{
   background-color: var(--first-dark-color);
-  color: #0d1730;
+  color: var(--dark-bg-color);
 }
 
 body.dark-theme .contact__input {
@@ -894,5 +1058,36 @@ body.dark-theme .contact__input:focus {
 body.dark-theme .contact__input::placeholder {
   color: rgb(176, 193, 209);
   font-weight: 400;
+}
+
+body.dark-theme .project-card {
+  border-color: white;
+  background-color: rgb(35, 35, 35);
+  border: none;
+  box-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .project-card:hover {
+  box-shadow: 2px 2px 6px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .project-card .card-body {
+  color: #EFEFEF;
+}
+
+body.dark-theme .project-card .card-body > h3 {
+  color: #EFEFEF;
+}
+
+body.dark-theme .project-card .card-body > p {
+  color: #EFEFEF;
+}
+
+body.dark-theme .project-card .card-body  button {
+  color: #EFEFEF;
+}
+
+body.dark-theme .footer {
+  background-color: var(--dark-bg-color);
 }
 /* DARK THEME CSS SECTION (END)*/
