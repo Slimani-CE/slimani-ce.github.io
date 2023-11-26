@@ -84,4 +84,4 @@ function toggleTheme(el) {
 
 const theme = localStorage.getItem("theme");
 const el = document.getElementById("theme-toggle");
-if (theme !== el.dataset.mode) toggleTheme(el);
+if (theme != null && theme !== el.dataset.mode) toggleTheme(el);
