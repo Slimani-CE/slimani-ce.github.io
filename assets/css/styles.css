@@ -518,7 +518,7 @@ img {
 }
 
 .project-card .card-body > h3 {
-  min-height: 50px;
+  /* min-height: 50px; */
   color: var(--second-color);
   font-size: 14px;
   font-weight: bold;
@@ -534,7 +534,7 @@ img {
   font-size: 14px;
   line-height: 24px;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -555,8 +555,8 @@ img {
   font-size: 10px;
   border-radius: 11px;
   padding: 0 5px;
-  border: 2px solid rgb(92, 97, 242);
-  color: rgb(92, 97, 242);
+  border: 1px solid rgb(94, 100, 206);
+  color: rgb(28, 33, 132);
 }
 
 .project-card .card-body .card-footer {
@@ -1084,6 +1084,10 @@ body.dark-theme .project-card .card-body > p {
 }
 
 body.dark-theme .project-card .card-body  button {
+  color: #EFEFEF;
+}
+
+body.dark-theme .project-card .card-body .badges span {
   color: #EFEFEF;
 }
 
