@@ -1,393 +1,609 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css" />
 
     <!-- =====BOX ICONS===== -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <meta property="og:title" content="Mustapha SLIMANI | Software Engineering Student">
-    <meta property="og:type" content="Portfolio">
-    <meta property="og:image" content="assets/img/profile with bg (2).png">
-    <meta property=" og:url" content="https://slimani-ce.github.io">
-    <meta property="og:descreption"
-        content="Software engineer and Master's student specializing in Distributed Systems & AI. With a talent for strategic thinking and effective collaboration. Proven success in project management, and teamwork.">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="Mustapha SLIMANI">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta
+      property="og:title"
+      content="Mustapha SLIMANI | Software Engineering Student"
+    />
+    <meta property="og:type" content="Portfolio" />
+    <meta property="og:image" content="assets/img/profile with bg (2).png" />
+    <meta property=" og:url" content="https://slimani-ce.github.io" />
+    <meta
+      property="og:descreption"
+      content="Software engineer and Master's student specializing in Distributed Systems & AI. With a talent for strategic thinking and effective collaboration. Proven success in project management, and teamwork."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Mustapha SLIMANI" />
     <title>Mustapha SLIMANI</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="../assets/img/avatar.png" type="image/gif" sizes="16x16">
-</head>
+    <link
+      rel="icon"
+      href="../assets/img/avatar.png"
+      type="image/gif"
+      sizes="16x16"
+    />
+  </head>
 
-<body class=".contact__input">
+  <body class=".contact__input">
     <!--===== HEADER =====-->
     <header class="l-header">
-        <nav class="nav bd-grid">
-            <div class="logo-div">
-                <img src="../assets/img/avatar.png" class="avatar" alt="avatar of me"><a href="#"
-                    class="nav__logo">Mustapha</a>
-            </div>
+      <nav class="nav bd-grid">
+        <div class="logo-div">
+          <img
+            src="../assets/img/avatar.png"
+            class="avatar"
+            alt="avatar of me"
+          /><a href="#" class="nav__logo">Mustapha</a>
+        </div>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">À propos</a></li>
-                    <!-- <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li> -->
-                    <li class="nav__item"><a href="#work" class="nav__link">Projets</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                </ul>
-            </div>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">À propos</a>
+            </li>
+            <!-- <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li> -->
+            <li class="nav__item">
+              <a href="#work" class="nav__link">Projets</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact</a>
+            </li>
+          </ul>
+        </div>
 
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+        <div class="theme-switcher-container">
+          <span>Thème</span>
+          <div
+            class="theme-switcher dark"
+            id="theme-toggle"
+            data-mode="dark"
+            onclick="toggleTheme(this)"
+          >
+            <div class="switcher-btn">
+              <i class="fa-solid fa-sun hidden"></i>
+              <i class="fa-solid fa-moon"></i>
             </div>
-            <div class="theme-switcher-container">
-                <span>Thème</span>
-                <div class="theme-switcher dark" id="theme-toggle" data-mode="dark" onclick="toggleTheme(this)">
-                    <div class="switcher-btn">
-                        <i class="fa-solid fa-sun hidden"></i>
-                        <i class="fa-solid fa-moon"></i>
-                    </div>
-                </div>
-            </div>
+          </div>
+        </div>
 
-            <div class="languages">
-                <span>FR</span>
-                <a href="../index.html">ENG</a>
-            </div>
-        </nav>
+        <div class="languages">
+          <span>FR</span>
+          <a href="../index.html">ENG</a>
+        </div>
+      </nav>
     </header>
 
     <main class="l-main">
-        <!--===== HOME =====-->
-        <section class="home bd-grid section" id="home">
-            <div class="home__data">
-                <h1 class="home__title">Hi,<br>C'est <span class="home__title-color">MUSTAPHA</span></h1>
+      <!--===== HOME =====-->
+      <section class="home bd-grid section" id="home">
+        <div class="home__data">
+          <h1 class="home__title">
+            Hi,<br />C'est <span class="home__title-color">MUSTAPHA</span>
+          </h1>
 
-                <a href="#contact" class="button">Contact</a>
-                <a href="../assets/CV/CV Mustapha SLIMANI fr.pdf" target="_blank" class="button-alt">Télécharger le
-                    CV<i class="fa-solid fa-file-arrow-down"></i></a>
+          <a href="#contact" class="button">Contact</a>
+          <a
+            href="../assets/CV/CV Mustapha SLIMANI fr.pdf"
+            target="_blank"
+            class="button-alt"
+            >Télécharger le CV<i class="fa-solid fa-file-arrow-down"></i
+          ></a>
+        </div>
+
+        <div class="home__social">
+          <a
+            href="https://www.linkedin.com/in/mustaphaslimani/"
+            target="_blank"
+            class="home__social-icon"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a
+            href="https://twitter.com/mstapha4real"
+            target="_blank"
+            class="home__social-icon"
+            ><i class="bx bxl-twitter"></i
+          ></a>
+          <a
+            href="https://github.com/Slimani-CE"
+            target="_blank"
+            class="home__social-icon"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a
+            href="https://api.whatsapp.com/send/?phone=212681895383&text=Hey!"
+            target="_blank"
+            class="home__social-icon"
+            ><i class="bx bxl-whatsapp"></i
+          ></a>
+        </div>
+
+        <div class="home__img">
+          <svg
+            class="home__blob"
+            viewBox="0 0 479 467"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <mask id="mask0" mask-type="alpha">
+              <path
+                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
+              />
+            </mask>
+            <g mask="url(#mask0)">
+              <path
+                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
+              />
+              <image
+                class="home__blob-img"
+                x="0"
+                y="0"
+                href="../assets/img/profile with bg (2).png"
+              />
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <!--===== À PROPOS =====-->
+      <section class="about section" id="about">
+        <h2 class="section-title">À propos de moi</h2>
+        <div class="about__container bd-grid">
+          <div class="about__content">
+            <h3 class="about__subtitle">Parcours Professionnel</h3>
+            <p class="about__text">
+              Je suis Ingénieur Logiciel chez ENOVA R&T, spécialisé dans le
+              développement full-stack avec une expertise particulière sur les
+              frameworks Angular et Spring Boot. Je suis titulaire d'un Master
+              en Systèmes Distribués et Intelligence Artificielle de l'ENSET
+              Mohammedia et d'une Licence en Génie Logiciel de la FST
+              Errachidia.
+            </p>
+          </div>
+          <div class="about__content">
+            <h3 class="about__subtitle">Compétences Techniques</h3>
+            <ul class="about__skills">
+              <li>
+                <strong>Développement Frontend :</strong> Angular (versions 8 à
+                19), Ionic, Capacitor, Ng-Zorro, Bootstrap, RxJS
+              </li>
+              <li>
+                <strong>Développement Backend :</strong> Java, Spring Boot
+              </li>
+              <li><strong>Développement Mobile :</strong> Ionic, Capacitor</li>
+              <li>
+                <strong>Gestion de Bases de Données :</strong> PostgreSQL,
+                Hibernate, JPA, Flyway
+              </li>
+              <li>
+                <strong>Pratiques DevOps :</strong> Docker, Kubernetes, GitLab
+                CI/CD, Maven, NPM, Nx, SonarQube
+              </li>
+              <li>
+                <strong>Frameworks de Test :</strong> Cypress, Jest, JUnit,
+                Mockito, Karma, Jasmine
+              </li>
+              <li>
+                <strong>Authentification & Autorisation :</strong> OAuth2,
+                Keycloak
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!--===== WORK =====-->
+      <section class="work section" id="work">
+        <h2 class="section-title">Projets</h2>
+
+        <div class="work__container bd-grid">
+          <div class="project-card">
+            <a
+              href="https://github.com/Slimani-CE/kanban-front-end"
+              target="_blank"
+            >
+              <div class="img-container">
+                <img src="../assets/img/thumbnail5.png" alt="picture" />
+                <div class="modal">
+                  <button class="second-btn">Voir le code</button>
+                </div>
+              </div>
+            </a>
+            <div class="card-body">
+              <h3>Kanban Task Management Application</h3>
+              <div class="badges">
+                <span>Java</span> <span>SPRING</span> <span>REST</span>
+                <span>PostgreSQL</span> <span>React</span> <span>MUI</span>
+                <span>JavaScript</span> <span>Docker</span> <span>axios</span>
+                <span>Figma</span> <span>Oracle Cloud</span>
+              </div>
+              <p>
+                Une application full-stack qui permet la création et la mise à
+                jour de tâches, ainsi que de les déplacer à travers différentes
+                étapes de réalisation.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://github.com/Slimani-CE/kanban-front-end"
+                  target="_blank"
+                  ><button class="second-btn">Voir le code</button></a
+                >
+              </div>
             </div>
-
-            <div class="home__social">
-                <a href="https://www.linkedin.com/in/mustaphaslimani/" target="_blank" class="home__social-icon"><i
-                        class='bx bxl-linkedin'></i></a>
-                <a href="https://twitter.com/mstapha4real" target="_blank" class="home__social-icon"><i
-                        class='bx bxl-twitter'></i></a>
-                <a href="https://github.com/Slimani-CE" target="_blank" class="home__social-icon"><i
-                        class='bx bxl-github'></i></a>
-                <a href="https://api.whatsapp.com/send/?phone=212681895383&text=Hey!" target="_blank"
-                    class="home__social-icon"><i class="bx bxl-whatsapp"></i></a>
-
+          </div>
+          <div class="project-card">
+            <a
+              href="https://github.com/Slimani-CE/distributed-systems"
+              target="_blank"
+            >
+              <div class="img-container">
+                <img src="../assets/img/thumbnail12.png" alt="picture" />
+                <div class="modal">
+                  <button class="second-btn">Voir le code</button>
+                </div>
+              </div>
+            </a>
+            <div class="card-body">
+              <h3>Système de Gestion de Radar Distribué</h3>
+              <div class="badges">
+                <span>SPRING</span> <span>REST</span> <span>gRPC</span>
+                <span>ANGULAR</span><span>TypeScript</span>
+              </div>
+              <p>
+                Ce projet est un système distribué simulant un système radar
+                avec trois microservices : enregistrement, infraction et radar.
+                Il comprend un client Java gRPC et une application Angular pour
+                l'interface utilisateur.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://github.com/Slimani-CE/distributed-systems"
+                  target="_blank"
+                  ><button class="second-btn">Voir le code</button></a
+                >
+              </div>
             </div>
-
-            <div class="home__img">
-                <svg class="home__blob" viewBox="0 0 479 467" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <mask id="mask0" mask-type="alpha">
-                        <path
-                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
-                    </mask>
-                    <g mask="url(#mask0)">
-                        <path
-                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
-                        <image class="home__blob-img" x="0" y="0" href="../assets/img/profile with bg (2).png" />
-                    </g>
-                </svg>
+          </div>
+          <div class="project-card">
+            <a
+              href="https://github.com/Slimani-CE/ecom-app-main"
+              target="_blank"
+            >
+              <div class="img-container">
+                <img src="../assets/img/thumbnail11.png" alt="picture" />
+                <div class="modal">
+                  <button class="second-btn">Voir le code</button>
+                </div>
+              </div>
+            </a>
+            <div class="card-body">
+              <h3>Ecom-App : Une application web Spring distribuée</h3>
+              <div class="badges">
+                <span>JAVA</span><span>SPRING</span><span>REST API</span
+                ><span>ANGULAR</span><span>TypeScript</span>
+              </div>
+              <p>
+                Ecom-App est une application modulaire et distribuée composée de
+                plusieurs microservices, chacun étant responsable d'un aspect
+                spécifique de la plateforme de commerce électronique. Ces
+                microservices collaborent pour offrir une expérience d'achat
+                fluide et efficace.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://github.com/Slimani-CE/ecom-app-main"
+                  target="_blank"
+                  ><button class="second-btn">Voir le code</button></a
+                >
+              </div>
             </div>
-        </section>
-
-        <!--===== ABOUT =====-->
-        <section class="about section " id="about">
-            <h2 class="section-title">À propos</h2>
-
-            <div class="bd-grid">
-                <div>
-                    <h2 class="about__subtitle">Je suis Mustapha SLIMANI</h2>
-                    <p class="about__text">Mustapha SLIMANI, passionné de logiciels et étudiant en
-                        Master spécialisé en Systèmes Distribués et Intelligence Artificielle. Maîtrisant des langages
-                        tels que C, Python, Java et JavaScript, j'apprécie élaborer des solutions créatives. En tant
-                        qu'étudiant dévoué, je fusionne connaissance et passion pour la programmation. Certifié en HTML,
-                        CSS, JavaScript, React et plus, je suis en chemin pour façonner l'innovation. Embarquons
-                        ensemble dans cette aventure du code !
-                    </p>
+          </div>
+          <div class="project-card">
+            <a
+              href="https://slimani-ce.github.io/front-end-mentor-ch15/"
+              target="_blank"
+            >
+              <div class="img-container">
+                <img src="../assets/img/thumbnail1.webp" alt="picture" />
+                <div class="modal">
+                  <!-- <img src="https://slimani-ce.github.io/front-end-mentor-ch4/images/icon-view.svg" alt=""> -->
+                  <i class="fa-solid fa-eye"></i>
                 </div>
+              </div>
+            </a>
+            <div class="card-body">
+              <h3>
+                Where in the world ?: Une application web utilisant l'API REST
+              </h3>
+              <div class="badges">
+                <span>JS</span><span>HTML</span><span>CSS</span><span>API</span>
+              </div>
+              <p>
+                Une application web permettant aux utilisateurs de rechercher et
+                consulter des informations sur les pays. Elle inclut des
+                fonctionnalités telles que le filtrage par région, le
+                basculement entre les thèmes sombres et clairs, ainsi que
+                l'affichage d'informations détaillées sur les pays sélectionnés.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://github.com/Slimani-CE/front-end-mentor-ch15"
+                  target="_blank"
+                  ><button class="second-btn">Voir le code</button></a
+                >
+                <a
+                  href="https://slimani-ce.github.io/front-end-mentor-ch15/"
+                  target="_blank"
+                  ><button>Explorer</button></a
+                >
+              </div>
             </div>
-        </section>
+          </div>
 
-        <!--===== WORK =====-->
-        <section class="work section" id="work">
-            <h2 class="section-title">Projets</h2>
-
-            <div class="work__container bd-grid ">
-                <div class="project-card">
-                    <a href="https://github.com/Slimani-CE/kanban-front-end" target="_blank">
-                        <div class="img-container">
-                            <img src="../assets/img/thumbnail5.png" alt="picture">
-                            <div class="modal">
-                                <button class="second-btn">Voir le code</button>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h3>Kanban Task Management Application</h3>
-                        <div class="badges">
-                            <span>Java</span> <span>SPRING</span> <span>REST</span> <span>PostgreSQL</span>
-                            <span>React</span> <span>MUI</span> <span>JavaScript</span> <span>Docker</span>
-                            <span>axios</span> <span>Figma</span> <span>Oracle Cloud</span>
-                        </div>
-                        <p>Une application full-stack qui permet la création et la mise à jour de tâches, ainsi que de
-                            les déplacer à travers différentes étapes de réalisation.
-                        </p>
-                        <div class="card-footer">
-                            <a href="https://github.com/Slimani-CE/kanban-front-end" target="_blank"><button
-                                    class="second-btn">Voir le code</button></a>
-                        </div>
-                    </div>
+          <div class="project-card">
+            <a
+              href="https://slimani-ce.github.io/rock-paper-scissors-webapp/"
+              target="_blank"
+            >
+              <div class="img-container">
+                <img src="../assets/img/thumbnail2.webp" alt="picture" />
+                <div class="modal">
+                  <!-- <img src="https://slimani-ce.github.io/front-end-mentor-ch4/images/icon-view.svg" alt=""> -->
+                  <i class="fa-solid fa-eye"></i>
                 </div>
-                <div class="project-card">
-                    <a href="https://github.com/Slimani-CE/distributed-systems" target="_blank">
-                        <div class="img-container">
-                            <img src="../assets/img/thumbnail12.png" alt="picture">
-                            <div class="modal">
-                                <button class="second-btn">Voir le code</button>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h3>Système de Gestion de Radar Distribué</h3>
-                        <div class="badges">
-                            <span>SPRING</span> <span>REST</span> <span>gRPC</span>
-                            <span>ANGULAR</span><span>TypeScript</span>
-                        </div>
-                        <p>Ce projet est un système distribué simulant un système radar avec trois microservices :
-                            enregistrement, infraction et radar. Il comprend un client Java gRPC et une application
-                            Angular pour l'interface utilisateur.
-                        </p>
-                        <div class="card-footer">
-                            <a href="https://github.com/Slimani-CE/distributed-systems" target="_blank"><button
-                                    class="second-btn">Voir le code</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <a href="https://github.com/Slimani-CE/ecom-app-main" target="_blank">
-                        <div class="img-container">
-                            <img src="../assets/img/thumbnail11.png" alt="picture">
-                            <div class="modal">
-                                <button class="second-btn">Voir le code</button>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h3>Ecom-App : Une application web Spring distribuée</h3>
-                        <div class="badges">
-                            <span>JAVA</span><span>SPRING</span><span>REST
-                                API</span><span>ANGULAR</span><span>TypeScript</span>
-                        </div>
-                        <p>Ecom-App est une application modulaire et distribuée composée de plusieurs microservices,
-                            chacun étant responsable d'un aspect spécifique de la plateforme de commerce électronique.
-                            Ces microservices collaborent pour offrir une expérience d'achat fluide et efficace.
-                        </p>
-                        <div class="card-footer">
-                            <a href="https://github.com/Slimani-CE/ecom-app-main" target="_blank"><button
-                                    class="second-btn">Voir le code</button></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <a href="https://slimani-ce.github.io/front-end-mentor-ch15/" target="_blank">
-                        <div class="img-container">
-                            <img src="../assets/img/thumbnail1.webp" alt="picture">
-                            <div class="modal">
-                                <!-- <img src="https://slimani-ce.github.io/front-end-mentor-ch4/images/icon-view.svg" alt=""> -->
-                                <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h3>Where in the world ?: Une application web utilisant l'API REST</h3>
-                        <div class="badges">
-                            <span>JS</span><span>HTML</span><span>CSS</span><span>API</span>
-                        </div>
-                        <p>Une application web permettant aux utilisateurs de rechercher et consulter des informations
-                            sur les pays. Elle inclut des fonctionnalités telles que le filtrage par région, le
-                            basculement entre les thèmes sombres et clairs, ainsi que l'affichage d'informations
-                            détaillées sur les pays sélectionnés.
-                        </p>
-                        <div class="card-footer">
-                            <a href="https://github.com/Slimani-CE/front-end-mentor-ch15" target="_blank"><button
-                                    class="second-btn">Voir le code</button></a>
-                            <a href="https://slimani-ce.github.io/front-end-mentor-ch15/"
-                                target="_blank"><button>Explorer</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <a href="https://slimani-ce.github.io/rock-paper-scissors-webapp/" target="_blank">
-                        <div class="img-container">
-                            <img src="../assets/img/thumbnail2.webp" alt="picture">
-                            <div class="modal">
-                                <!-- <img src="https://slimani-ce.github.io/front-end-mentor-ch4/images/icon-view.svg" alt=""> -->
-                                <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h3>Jeu pierre-feuille-ciseaux : un jeu web réactif</h3>
-                        <div class="badges">
-                            <span>JS</span><span>HTML</span><span>CSS</span>
-                        </div>
-                        <p>Un jeu de Pierre-Papier-Ciseaux visuellement attrayant et réactif basé sur le web. Il intègre
-                            des couleurs vives, des éléments de jeu interactifs et un modal de règles pour offrir une
-                            expérience utilisateur agréable. Le code CSS garantit que l'interface du jeu est à la fois
-                            élégante et adaptable à différentes tailles d'écran.
-                        </p>
-                        <div class="card-footer">
-                            <a href="https://github.com/Slimani-CE/rock-paper-scissors-webapp" target="_blank"><button
-                                    class="second-btn">Voir le code</button></a>
-                            <a href="https://slimani-ce.github.io/rock-paper-scissors-webapp/"
-                                target="_blank"><button>Explorer</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <a href="https://slimani-ce.github.io/front-end-mentor-ch14/" target="_blank">
-                        <div class="img-container">
-                            <img src="../assets/img/thumbnail3.webp" alt="picture">
-                            <div class="modal">
-                                <!-- <img src="https://slimani-ce.github.io/front-end-mentor-ch4/images/icon-view.svg" alt=""> -->
-                                <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h3>Calculateur d'Indice de Masse Corporelle (IMC)</h3>
-                        <div class="badges">
-                            <span>JS</span><span>HTML</span><span>CSS</span>
-                        </div>
-                        <p>Comprenez mieux votre poids par rapport à votre taille en utilisant notre calculateur
-                            d'Indice de Masse Corporelle (IMC). Bien que l'IMC ne soit pas le seul déterminant d'un
-                            poids sain, il offre un point de départ précieux pour évaluer votre santé et votre bien-être
-                            général
-                        </p>
-                        <div class="card-footer">
-                            <a href="https://github.com/Slimani-CE/front-end-mentor-ch14" target="_blank"><button
-                                    class="second-btn">Voir le code</button></a>
-                            <a href="https://slimani-ce.github.io/front-end-mentor-ch14/"
-                                target="_blank"><button>Explorer</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <a href="https://slimani-ce.github.io/front-end-mentor-ch13/" target="_blank">
-                        <div class="img-container">
-                            <img src="../assets/img/thumbnail4.webp" alt="picture">
-                            <div class="modal">
-                                <!-- <img src="https://slimani-ce.github.io/front-end-mentor-ch4/images/icon-view.svg" alt=""> -->
-                                <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h3>Application de génération de mots de passe</h3>
-                        <div class="badges">
-                            <span>JS</span><span>HTML</span><span>CSS</span>
-                        </div>
-                        <p>Une application web réactive qui génère un mot de passe aléatoire en fonction des critères
-                            sélectionnés par l'utilisateur. Elle permet aux utilisateurs de spécifier la longueur du mot
-                            de passe ainsi que s'il doit inclure des lettres majuscules et minuscules, des chiffres et
-                            des symboles
-                        </p>
-                        <div class="card-footer">
-                            <a href="https://github.com/Slimani-CE/front-end-mentor-ch13" target="_blank"><button
-                                    class="second-btn">Voir le code</button></a>
-                            <a href="https://slimani-ce.github.io/front-end-mentor-ch13/"
-                                target="_blank"><button>Explorer</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <a href="https://slimani-ce.github.io/advice-generator-app/" target="_blank">
-                        <div class="img-container">
-                            <img src="../assets/img/thumbnail.webp" alt="picture">
-                            <div class="modal">
-                                <!-- <img src="https://slimani-ce.github.io/front-end-mentor-ch4/images/icon-view.svg" alt=""> -->
-                                <i class="fa-solid fa-eye"></i>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="card-body">
-                        <h3>Application de génération de conseils
-                        </h3>
-                        <div class="badges">
-                            <span>JS</span><span>HTML</span><span>CSS</span><span>API</span>
-                        </div>
-                        <p>Répertoire de l'application Générateur de Conseils ! Cette application web offre une
-                            inspiration instantanée d'un simple clic. Un design élégant, une mise en page réactive et
-                            une interface conviviale rendent la sagesse accessible à tous. Explorez et partagez la joie
-                            !
-                        </p>
-                        <div class="card-footer">
-                            <a href="https://github.com/Slimani-CE/advice-generator-app" target="_blank"><button
-                                    class="second-btn">Voir le code</button></a>
-                            <a href="https://slimani-ce.github.io/advice-generator-app/"
-                                target="_blank"><button>Explorer</button></a>
-                        </div>
-                    </div>
-                </div>
+              </div>
+            </a>
+            <div class="card-body">
+              <h3>Jeu pierre-feuille-ciseaux : un jeu web réactif</h3>
+              <div class="badges">
+                <span>JS</span><span>HTML</span><span>CSS</span>
+              </div>
+              <p>
+                Un jeu de Pierre-Papier-Ciseaux visuellement attrayant et
+                réactif basé sur le web. Il intègre des couleurs vives, des
+                éléments de jeu interactifs et un modal de règles pour offrir
+                une expérience utilisateur agréable. Le code CSS garantit que
+                l'interface du jeu est à la fois élégante et adaptable à
+                différentes tailles d'écran.
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://github.com/Slimani-CE/rock-paper-scissors-webapp"
+                  target="_blank"
+                  ><button class="second-btn">Voir le code</button></a
+                >
+                <a
+                  href="https://slimani-ce.github.io/rock-paper-scissors-webapp/"
+                  target="_blank"
+                  ><button>Explorer</button></a
+                >
+              </div>
             </div>
-        </section>
+          </div>
 
-        <!--===== CONTACT =====-->
-        <section class="contact section" id="contact">
-            <h2 class="section-title">Contact</h2>
-
-            <div class="contact__container bd-grid">
-                <form action="https://formsubmit.co/99d61ce29c71b01f3b1e514ccb7cbcac" method="POST">
-                    <input type="text" placeholder="Nom" name="name" class="contact__input">
-                    <input type="mail" placeholder="Email" name="email" class="contact__input">
-                    <textarea placeholder="Votre message..." cols="0" rows="10" class="contact__input" name="userMsg"
-                        id="userMsg" cols="30" rows="10" spellcheck="false" data-ms-editor="true"></textarea>
-                    <input type="hidden" name="_next" value="https://slimani-ce.github.io/fr/thanks">
-                    <input type="hidden" name="_captcha" value="false">
-
-                    <input type="submit" value="Send" class="contact__button button">
-                </form>
+          <div class="project-card">
+            <a
+              href="https://slimani-ce.github.io/front-end-mentor-ch14/"
+              target="_blank"
+            >
+              <div class="img-container">
+                <img src="../assets/img/thumbnail3.webp" alt="picture" />
+                <div class="modal">
+                  <!-- <img src="https://slimani-ce.github.io/front-end-mentor-ch4/images/icon-view.svg" alt=""> -->
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+              </div>
+            </a>
+            <div class="card-body">
+              <h3>Calculateur d'Indice de Masse Corporelle (IMC)</h3>
+              <div class="badges">
+                <span>JS</span><span>HTML</span><span>CSS</span>
+              </div>
+              <p>
+                Comprenez mieux votre poids par rapport à votre taille en
+                utilisant notre calculateur d'Indice de Masse Corporelle (IMC).
+                Bien que l'IMC ne soit pas le seul déterminant d'un poids sain,
+                il offre un point de départ précieux pour évaluer votre santé et
+                votre bien-être général
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://github.com/Slimani-CE/front-end-mentor-ch14"
+                  target="_blank"
+                  ><button class="second-btn">Voir le code</button></a
+                >
+                <a
+                  href="https://slimani-ce.github.io/front-end-mentor-ch14/"
+                  target="_blank"
+                  ><button>Explorer</button></a
+                >
+              </div>
             </div>
-        </section>
+          </div>
+
+          <div class="project-card">
+            <a
+              href="https://slimani-ce.github.io/front-end-mentor-ch13/"
+              target="_blank"
+            >
+              <div class="img-container">
+                <img src="../assets/img/thumbnail4.webp" alt="picture" />
+                <div class="modal">
+                  <!-- <img src="https://slimani-ce.github.io/front-end-mentor-ch4/images/icon-view.svg" alt=""> -->
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+              </div>
+            </a>
+            <div class="card-body">
+              <h3>Application de génération de mots de passe</h3>
+              <div class="badges">
+                <span>JS</span><span>HTML</span><span>CSS</span>
+              </div>
+              <p>
+                Une application web réactive qui génère un mot de passe
+                aléatoire en fonction des critères sélectionnés par
+                l'utilisateur. Elle permet aux utilisateurs de spécifier la
+                longueur du mot de passe ainsi que s'il doit inclure des lettres
+                majuscules et minuscules, des chiffres et des symboles
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://github.com/Slimani-CE/front-end-mentor-ch13"
+                  target="_blank"
+                  ><button class="second-btn">Voir le code</button></a
+                >
+                <a
+                  href="https://slimani-ce.github.io/front-end-mentor-ch13/"
+                  target="_blank"
+                  ><button>Explorer</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <a
+              href="https://slimani-ce.github.io/advice-generator-app/"
+              target="_blank"
+            >
+              <div class="img-container">
+                <img src="../assets/img/thumbnail.webp" alt="picture" />
+                <div class="modal">
+                  <!-- <img src="https://slimani-ce.github.io/front-end-mentor-ch4/images/icon-view.svg" alt=""> -->
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+              </div>
+            </a>
+            <div class="card-body">
+              <h3>Application de génération de conseils</h3>
+              <div class="badges">
+                <span>JS</span><span>HTML</span><span>CSS</span><span>API</span>
+              </div>
+              <p>
+                Répertoire de l'application Générateur de Conseils ! Cette
+                application web offre une inspiration instantanée d'un simple
+                clic. Un design élégant, une mise en page réactive et une
+                interface conviviale rendent la sagesse accessible à tous.
+                Explorez et partagez la joie !
+              </p>
+              <div class="card-footer">
+                <a
+                  href="https://github.com/Slimani-CE/advice-generator-app"
+                  target="_blank"
+                  ><button class="second-btn">Voir le code</button></a
+                >
+                <a
+                  href="https://slimani-ce.github.io/advice-generator-app/"
+                  target="_blank"
+                  ><button>Explorer</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--===== CONTACT =====-->
+      <section class="contact section" id="contact">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact__container bd-grid">
+          <form
+            action="https://formsubmit.co/99d61ce29c71b01f3b1e514ccb7cbcac"
+            method="POST"
+          >
+            <input
+              type="text"
+              placeholder="Nom"
+              name="name"
+              class="contact__input"
+            />
+            <input
+              type="mail"
+              placeholder="Email"
+              name="email"
+              class="contact__input"
+            />
+            <textarea
+              placeholder="Votre message..."
+              cols="0"
+              rows="10"
+              class="contact__input"
+              name="userMsg"
+              id="userMsg"
+              cols="30"
+              rows="10"
+              spellcheck="false"
+              data-ms-editor="true"
+            ></textarea>
+            <input
+              type="hidden"
+              name="_next"
+              value="https://slimani-ce.github.io/fr/thanks"
+            />
+            <input type="hidden" name="_captcha" value="false" />
+
+            <input type="submit" value="Send" class="contact__button button" />
+          </form>
+        </div>
+      </section>
     </main>
 
     <!--===== FOOTER =====-->
     <footer class="footer">
-        <p class="footer__title">Mustapha SLIMANI</p>
-        <div class="footer__social">
-            <a href="https://www.linkedin.com/in/mustaphaslimani/" target="_blank" class="footer__icon"><i
-                    class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/Slimani-CE" target="_blank" class="footer__icon"><i
-                    class='bx bxl-github'></i></a>
-            <a href="https://twitter.com/mstapha4real" target="_blank" class="footer__icon"><i
-                    class='bx bxl-twitter'></i></a>
-        </div>
-        <p class="footer__copy">&#169; Slimani-ce. 2023</p>
+      <p class="footer__title">Mustapha SLIMANI</p>
+      <div class="footer__social">
+        <a
+          href="https://www.linkedin.com/in/mustaphaslimani/"
+          target="_blank"
+          class="footer__icon"
+          ><i class="bx bxl-linkedin"></i
+        ></a>
+        <a
+          href="https://github.com/Slimani-CE"
+          target="_blank"
+          class="footer__icon"
+          ><i class="bx bxl-github"></i
+        ></a>
+        <a
+          href="https://twitter.com/mstapha4real"
+          target="_blank"
+          class="footer__icon"
+          ><i class="bx bxl-twitter"></i
+        ></a>
+      </div>
+      <p class="footer__copy">&#169; Slimani-ce. 2023</p>
     </footer>
-
 
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!--===== MAIN JS =====-->
     <script src="../assets/js/main.js"></script>
-</body>
-
+  </body>
 </html>
